@@ -1,0 +1,51 @@
+Przygotowałem dla Państwa zestaw do zapoznania się z Uczeniem Maszynowym.
+Składa się on z kilku plików:
+    1.Uczenie_Maszynowe_Koszalin.pptx zawiera prezentację o Uczeniu Maszynowym przeprowadzoną w szkole.
+
+        Każdy slajd w prezentacji zawiera opis tekstowy, który pozwoli lepiej zrozumieć treść każdego slajdu.
+
+    2.Sieć_CNN_rozpoznawanie_cyfr.ipynb - Jest to notebook, który można uruchomić w narzędziu Colab od firmy Google.
+
+        Notebook, to połączenie, które umożliwia programowanie i dodawanie komentarzy wyjaśnień w bardzo przejrzysty wizualny sposób.
+        Aby móc używać/tworzyć/modyfikować takie notebooki potrzebne jest konto mailowe gmail.
+        Bardzo dobrym punktem startowym w celu skonfigurowania i poznania Colab jest strona WWW https://www.datageeks.pl/geeks-blog/77-google-colaboratory
+
+    3. Sieć CNN - rozpoznawanie cyfr - Colab.pdf
+
+        To jest wynik wykonania tego notebooka.
+
+    4. Instrukcja.txt
+
+        Niniejsza instrukcja.
+
+#####################
+Zadania dla chętnych
+#####################
+
+    1. Dodać wartstwę dropout do sieci CNN. Sprawdzić czy sieć zachowuje się lepiej. 
+
+        Wypróbuj poniższe wartości parametru p dla warstwy porzucania:
+
+            bez Dropout
+            Dropout 0.2
+            Dropout 0.3
+            Dropout 0.5
+
+    2. Usuń warstwę Conv2D(64, (3,3)). Jak to wpłynie na dokładność fazy uczenia się i fazy testowania.
+
+        Model                               accuracy_train    accuracy_test
+        CNN-1 (oryginalna sieć )                0.9931            0.9817
+        CNN-2 (sieć bez jednej wartstwy)           ?                ?
+
+    3. Zbadaj jak sie zmienia uczenie sieci przy zmianie liczby epok/iteracji. 
+       Użyj wartości 1,2,5,10,20,100 
+
+    4. Znajdź cyfry, których model nie rozpoznaje. Które cyfry CNN myli najczęściej?
+    5. Obróc obrazy cyfr i sprawdź czy model dobrze ją rozpoznaje. Co możesz zrobić aby ulepszyć model.
+    6. Spróbuj oszukać model. Narysuj cyfrę tak, aby człowiek bez problemu ją rozpoznał, ale CNN podała złą odpowiedź.
+    7. Dodaj kolejne filtry. Jak zmieniło się zachowanie sieci w fazie uczenia, testowej i na nowych danych?
+
+        Conv2D(8, ...)
+        Conv2D(16, ...)
+        Conv2D(32, ...)
+        Conv2D(64, ...)
